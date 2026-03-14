@@ -2,7 +2,7 @@ import json
 import requests
 
 def test_json_analysis():
-    url = "http://localhost:8000/analyze-from-json"
+    url = "https://resume-enhancer-backend.vercel.app/ai-service/analyze-from-json"
     
     # User's sample data structure
     resume_json = {

@@ -40,6 +40,6 @@ app.use((err, _req, res, _next) => {
 // ──── Start Server ─────────────────────────────────────────
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`   Health: http://localhost:${PORT}/api/health`);
-  console.log(`   Upload: POST http://localhost:${PORT}/api/resume/upload`);
+  console.log(`   Health: https://resume-enhancer-backend.vercel.app/api/health`);
+  console.log(`   Upload: POST https://resume-enhancer-backend.vercel.app/api/resume/upload`);
 });
