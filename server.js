@@ -16,8 +16,10 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve uploaded files statically (handy during development)
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+// Serve uploaded files statically (use /tmp/uploads in Vercel)
+const isVercel = process.env.VERCEL === "1";
+const uploadPath = isVercel ? "/tmp/uploads" : path.join(__dirname, "uploads");
+app.use("/uploads", express.static(uploadPath));
 
 // ──── Routes ───────────────────────────────────────────────
 app.use("/api/resume", resumeRoutes);

@@ -3,7 +3,9 @@ const path = require("path");
 const fs = require("fs");
 
 // Ensure upload directory exists
-const uploadDir = process.env.UPLOAD_DIR || "uploads";
+const isVercel = process.env.VERCEL === "1";
+const uploadDir = isVercel ? "/tmp/uploads" : (process.env.UPLOAD_DIR || "uploads");
+
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }

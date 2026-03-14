@@ -36,8 +36,9 @@ scorer = ATSScorer()
 parser = ResumeParser()
 enhancer = ResumeEnhancer()
 
-# Create output directory for PDFs
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
+# Create output directory for PDFs (Use /tmp in Vercel)
+is_vercel = os.environ.get("VERCEL") == "1"
+OUTPUT_DIR = "/tmp/output" if is_vercel else os.path.join(os.path.dirname(__file__), "output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
