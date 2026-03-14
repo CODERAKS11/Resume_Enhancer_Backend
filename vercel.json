@@ -12,6 +12,10 @@
   ],
   "routes": [
     {
+      "src": "/(parse-resume|analyze|ats-score|score-from-json|analyze-from-json|enhance-resume|parse-linkedin|get-resume-pdf/.*|parse-jd)",
+      "dest": "python-ai-service/main.py"
+    },
+    {
       "src": "/ai_service/(.*)",
       "dest": "python-ai-service/main.py"
     },
