@@ -183,7 +183,7 @@ async def enhance_resume(request: dict):
                 "enhanced_score": result["enhanced_score"],
                 "score_improvement": result["enhanced_score"] - result["original_score"],
                 "enhanced_resume": enhanced_data,
-                "pdf_url": f"/get-resume-pdf/{pdf_filename}",
+                "pdf_url": f"/ai_service/get-resume-pdf/{pdf_filename}",
                 "research_findings": result["research_summary"]
             }
         }

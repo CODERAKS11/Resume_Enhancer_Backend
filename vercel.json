@@ -12,7 +12,7 @@
   ],
   "routes": [
     {
-      "src": "/ai-service/(.*)",
+      "src": "/ai_service/(.*)",
       "dest": "python-ai-service/main.py"
     },
     {

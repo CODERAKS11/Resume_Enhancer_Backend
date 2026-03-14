@@ -5,7 +5,7 @@ import sys
 # The specific PDF the user uploaded recently
 pdf_path = r"c:\Users\AMARJEET KUMAR\Desktop\Placement_Assist\Backend\uploads\resume-1773402835613-178786213.pdf"
 
-url = "https://resume-enhancer-backend.vercel.app/ai-service/parse-resume"
+url = "https://resume-enhancer-backend.vercel.app/ai_service/parse-resume"
 
 with open(pdf_path, 'rb') as f:
     files = {'file': ('resume.pdf', f, 'application/pdf')}
